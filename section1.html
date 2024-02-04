@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>1 Introduction</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/dreampulse/computer-modern-web-font/master/fonts.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div id="header" class="d-flex p-2 justify-content-between">
+        <div id="mySidenav" class="sidenav">
+            <a href="section1.html">1 Introduction</a>
+            <a href="section2.html">2 Sets, Functions</a>
+            <a href="section3.html">3 Algebraic Structures</a>
+        </div>
+
+        <div>
+            <span style="font-size:30px;cursor:pointer" onclick="useNav()">&#9776; Menu</span>
+        </div>
+
+        <nav id="pag">
+            <ul class="pagination">
+                <li class="page-item">
+                    <a class="page-link" href="section3.html">&larr;</a>
+                </li class="page-item">
+                    <a class="page-link" href="section2.html">&rarr;</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <div id="content">
+        <h1>1 Introduction</h1>
+        <p>A Function assigns an element from a set X to an element from a set Y. It is denoted width</p>
+        \[X \xrightarrow{f} Y\]
+        <p>Where X is the domain and Y is the codomain, we write X = dom(f), Y = cod(f).</p>
+        <p>Examples of Functions: </p>
+        \begin{flalign*}
+            &\mathbb{R} \xrightarrow{p} \mathbb{R},\ p(x) = smallest\ Prime\ \geq x &\\
+            &\mathbb{N} \xrightarrow{g} \mathbb{N},\ x \rightarrow 2x &\\
+            &\mathbb{N} \xrightarrow{h} \mathbb{Q},\ x \rightarrow \frac{x}{2} &\\
+            &\mathbb{R^2} \xrightarrow{\phi} \mathbb{R},\ \phi (x,y) = \frac{3}{2}x + \sqrt{2}y &\\
+        \end{flalign*}
+        <p>A function denotes an assigment; to one element x &#x220A; assigned element from Y we write f(x), called the <strogn>functionvalue from f at the point x.</strong></p>
+        <p>The set of all possible values from f is called the image and it is denoted with Im(f), so</p>
+        \[Im(f) = \{f(x)|x \in X\}=\{y \in Y|\exists_{x\in X}f(x)=y\}\]
+        <p>The most important property of functions are: </p>
+        <p><strong>1.1 Definition.</strong> <i class="definition">f is calle</i></p>
+        \begin{flalign}
+            &\qquad \qquad\boldsymbol{injectiv:} \qquad \ \Longleftrightarrow \forall_{x_1,x_2\in X}(x_1 \ne x_2 \Rightarrow f(x_1)\ne f(x_2))&\\
+            &\qquad \qquad \boldsymbol{surjectiv:} \qquad \Longleftrightarrow \forall_{y \in Y}\exists_{x \in X}f(x)=y&\\
+            &\qquad \qquad \boldsymbol{bijectiv:} \qquad \ \Longleftrightarrow injektiv \ und \ surjektiv&\\
+        \end{flalign}
+        <p>A injective function f is called an <strong>injection</strong>.  We say 
+            <strong>surjection</strong>, <strong>bijection</strong> aswell.
+            Examples: f isn't injectiv or surjectiv, g is injectiv, but
+            not surjectiv, h has the same propertie as g, p is neither injective nor surjective
+            and φ is
+            surjectiv, but not injectiv.
+        </p>
+        <h1>1.1 Notation</h1>
+        <p>A set X is characterised by its elements, the things a, for &#x220A; X gilt. If we take away or add elements, then  X isn't the same set anymore. This basic idea is expressed in the extensionality postulate, which regulates when two sets are considered identical:<p>
+        \[X=Y \ \Longleftrightarrow \ \forall_{a}(a\in X \ \Longleftrightarrow \ a\in Y)\]
+        <p>Where a is a set aswell.</p>
+        <p>For the <strong>closed interval</strong> we write: </p>
+        \[[a,b]=\{x\in \mathbb{R}|a\leq x \leq b\}\]
+        <p>There is also the<strong>open interval:</strong></p>
+        \[(a,b)=\{x\in \mathbb{R}|a < x < b \}\]
+        <p>and the <strong>halfopen intervalls [a,b) und (a,b]</strong></p>
+        <p>A function f: X &#8594; Y is imagineable as a set aswell. Because the domaine and the codomaine are sets, f can be writen as the set of all assigments x &#8594; f(x),</p>
+        \[f=\{(x,y)|x\in X \wedge y=f(x)\}\]
+        <p>Where the<strong>ordered pair</strong>(x,y) is a set.</p>
+        <p>We can also represent numbers as sets:</p>
+        \[0=\phi,\ 1=\{0\},\ 2=\{0,1\},\ generally\ n=\{0,1,...,n-1\}.\]
+        <p>&empty; is the empty set, it doesn't have any elements, and the natural numbers n have n elements, the previous numbers. As an example the natural number 4 can be written as</p>
+        \[4=\{\phi,\{\phi\},\{\phi,\{\phi\}\},\{\phi,\{\phi\},\{\phi,\{\phi\}\}\}\}\]
+        <p>The number &pi; is also a set. We can use the decimal represantation</p>
+        \[\pi=3.14159265358979323846264338327950288419716939937510.....\]
+        <p>and we can write &pi; as</p>
+        \[\{(3,0),(1,1),(2,4),(3,1),(4,5),(5,9),(6,2),(7,6),.....\}\]
+        <p>Two ordered pairs are considered equal:</p>
+        \[(a,b)=(c,d)\ \Longleftrightarrow \ a=c\wedge b=d\]
+    </div>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="mathjax.js"></script>
+    <script src="navbar.js"></script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>3  Algebraic Structures</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/dreampulse/computer-modern-web-font/master/fonts.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div id="header" class="d-flex p-2 justify-content-between">
+        <div id="mySidenav" class="sidenav">
+            <a href="section1.html">1 Introduction</a>
+            <a href="section2.html">2 Sets, Functions</a>
+            <a href="section3.html">3 Algebraic Structures</a>
+        </div>
+
+        <div>
+            <span style="font-size:30px;cursor:pointer" onclick="useNav()">&#9776; Menu</span>
+        </div>
+
+        <nav id="pag">
+            <ul class="pagination justify-content-center">
+                <li class="page-item">
+                    <a class="page-link" href="section2.html">&larr;</a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link" href="section1.html">&rarr;</a>
+                </li>
+            </ul>
+        </nav>
+    </div>    
+    <div id="content">
+        <h1>3  Algebraic Structures</h1>
+        <p><strong>3.1 Definition.</strong> <i class="definition">Let X be a set. A <strong>binary operation</strong> on X is a mapping X &times; X &#8594; X.</i></p>
+        <p>for every two element a, b from X such an operation assigns another element
+            to, which, unless otherwise stated, is denoted by a&times;b. A set X with a binary operation
+            (or several) is called an algebraic structure. Algebraic structures can have a lot of properties;the most importants are given below.</p>
+        <p><strong>3.2 Definition.</strong> <i class="definition">Let f:X &times; X &#8594; X, (a,b) &#8594; a&times;b. Then we call f</i></p>
+        \begin{flalign}
+        &\qquad \qquad \boldsymbol{associative}\ when\ \forall_{a,b,c\in X}\ (a\cdot b)\cdot c=a\cdot (b\cdot c),\ and&\\    
+        &\qquad \qquad \boldsymbol{commutative},\ wenn\ \forall_{a,b\in X}\ a\cdot b=b\cdot a.
+        \end{flalign}
+        <p><i class="definition">A set X, on which an associative operation f: X &times; X &#8594 X defined is, we call a <strong>semigroup.</strong>If the commutative law also holds, (X,f) is a <strong>commutative semigroup.</strong></i></p>
+        <p><strong>3.3 Proposition.</strong><i class="definition">A neutal element, if it exist in (X,f), is clearly determined.</i></p>
+        \begin{flalign*}
+        & Proof. Suppose,\ that\ e\ and\ e'\ are\ both\ neutral.\ Then\ follows\  that&\\
+        \end{flalign*}
+        \[e'=e\cdot e'=e.\]
+        \begin{flalign*}
+        & The\ left\ identity\ holds,\ because\ e\ is\ neutral,\ and\ the\ right\ one\ because\ e'\ is\ also\ neutral. &\\
+        \end{flalign*}
+        <p><strong>3.4 Definition.</strong><i class="definition"> A semigroup with a neutral element is called a <strong>monoid.</strong> If the operation is also commutative, we call it a <strong>commutative monoid.</strong></i></p>
+        <p>e.q. (ℕ,&middot;) is a commutative monoid, with the neutral elemenent 1.</p>
+        <p><strong>3.5 Proposition.</strong> <i class="definition">Let (X,&middot;,e) be a monoid. Then if a &#x220A; X has an inverse, then it is clearly determined.</i></p>
+        \begin{flalign*}
+        & Proof. Suppose\ that,\ x\ and\ y\ are\ both\ inverses\ to\ a.\ \ Then\ it\ follows\ that&\\
+        \end{flalign*}
+        \[y=y\cdot e=y\cdot (a\cdot x) = (y\cdot a)\cdot x = e\cdot x = x \]
+        <p>The inverse to an elemenent a in a monoid is denoted with the symbol
+            a<sup>-1</sup>. If the binary operation is additive, we denote the
+            inverse of a with -a, and the neutrale elemenent with 0.</p>
+        <p><strong>3.6 Definition. </strong> <i class="definition">A monoid (X,&middot;,e), where all elemenents have an inverse is called a <strong>group.</strong> If the binary operation also commutative, then X is a <strong>commutative group</strong> or <strong>abelian group.</strong></i></p>
+        <p>Therefore the set of the whole numbers with the operation of addition, so (ℤ,+), is a abelian group. All monoids have a group inside them:</p>
+        <p><strong>3.7 Definition.</strong><i class="definition"> Let (X,&middot;,e) be a  Monoid. Then X is have <sup>&times;</sup>={a&#x220A;X | &exist;a<sup>-1</sup>}, which is called the <strong>unit group.</strong></i></p>
+        <p><strong>3.8 Definition. </strong><i class="definition">let (X,+,&middot;) be an algebraic structure with the operations +:X &times; X &#8594; and &middot;:X &times; X &#8594; X. Then we say that, </i></p>
+        \begin{flalign}
+        &\qquad \qquad in\ X\ holds\ the\ \boldsymbol{left\ distributiv\ law,}\ when&\\ 
+        \end{flalign}
+        \[\forall_{a,b,c\in X}\ a\cdot (b+c)=(a\cdot c)+(b\cdot c).\]  
+        \begin{flalign}
+        &\qquad \qquad in\ X\ holds\ the\ \boldsymbol{rigth\ distributiv\ law}\ when:\ \forall_{a,b,c\in X}\ (a+b)\cdot c=(a\cdot c)+(b\cdot c).&\\ 
+        &\qquad \qquad X\ is\ called\ \boldsymbol{distributiv,} when\ both\ are\ satisfied.&
+        \end{flalign}  
+        \begin{flalign}
+        &\qquad \qquad (X,+,\cdot)\ is\ a\ \boldsymbol{ring},\ when\ (X,+)\ is\ an\ abelian\ group\ and\ the\ mult-&\\
+        &\qquad \qquad iplication\ is\ \cdot\ associative\ and\ distributiv\ over\ the\ addition.&\\ 
+        \end{flalign}
+        \begin{flalign}
+        &\qquad \qquad A\ ring\ is\ a\ \boldsymbol{commutative\ ring,}\ when\ the\ multiplication\ is\ com-&\\
+        &\qquad \qquad mutativ.\ If\ there\ exists\ a\ multiplicativ\ neutral\ elemenent,\ which\ is\ denoted&\\
+        &\qquad \qquad by\ 1,\ so\ X\ is\ a\ \boldsymbol{ring\ with\ one,}\ if\ both\ of\ them\ holds,&\\ 
+        &\qquad \qquad then,\ it\ is\ a\ \boldsymbol{commutative\ ring\ with\ one.}&
+        \end{flalign}    
+        <p>A Ring (R,+,&middot;) is therefore an algebraic structure with two binary perations + and &middot;, so, that</p>
+        <ol>
+            <li>(R,+) is an abelian group and</li>
+            <li>(R,&middot;) is a semigroup, and</li>
+            <li>the the distributiv law holds.</li>
+        </ol>
+    </div> 
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="navbar.js"></script>
+</body>
+</html>
